@@ -22,7 +22,7 @@ $categories = []; //  to store categories.
 if (mysqli_num_rows($specialtyResult) > 0) {
     while ($specialtyRow = mysqli_fetch_assoc($specialtyResult)) {
         $categoryId = $specialtyRow['designCategoryID'];
-        $categoryQuery = "SELECT category FROM DesignCategory WHERE id = $categoryId";
+        $categoryQuery = "SELECT category FROM designcategory WHERE id = $categoryId";
         $categoryResult = mysqli_query($connection, $categoryQuery);
         while ($categoryRow = mysqli_fetch_assoc($categoryResult)) {
             $categories[] = $categoryRow['category'];

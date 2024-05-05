@@ -32,7 +32,7 @@ include 'security.php';
 
         //establish database connection
         $mysql = mysqli_connect("localhost", "root", "root", "360interiors");
-        $query = "SELECT * FROM Client WHERE id='$clientID'";
+        $query = "SELECT * FROM client WHERE id='$clientID'";
         $result = mysqli_query($mysql, $query);
         $row = mysqli_fetch_assoc($result);
 
@@ -99,30 +99,30 @@ include 'security.php';
                     </tr>
 
                     <?php
-                    $query = "SELECT * FROM DesignConsultationRequest WHERE clientID='$clientID'";
+                    $query = "SELECT * FROM designconsultationrequest WHERE clientID='$clientID'";
                     $result = mysqli_query($mysql, $query);
                     while ($row = mysqli_fetch_assoc($result)) {
                         //information for designer
-                        $sql = "SELECT * FROM Designer WHERE id='" . $row['designerID'] . "'";
+                        $sql = "SELECT * FROM designer WHERE id='" . $row['designerID'] . "'";
                         $designerResult = mysqli_query($mysql, $sql);
                         $drsignerRow = mysqli_fetch_assoc($designerResult);
                         $brandName = $drsignerRow["brandName"];
                         $logo = $drsignerRow['logoImgFileName'];
 
                         //to get category 
-                        $sql = "SELECT * FROM DesignCategory WHERE id='" . $row['designCategoryID'] . "'";
+                        $sql = "SELECT * FROM designcategory WHERE id='" . $row['designCategoryID'] . "'";
                         $categoryResult = mysqli_query($mysql, $sql);
                         $categoryRow = mysqli_fetch_assoc($categoryResult);
                         $categoryName = $categoryRow["category"];
 
                         //to get room type 
-                        $sql = "SELECT * FROM RoomType WHERE id='" . $row['roomTypeID'] . "'";
+                        $sql = "SELECT * FROM roomtype WHERE id='" . $row['roomTypeID'] . "'";
                         $typeResult = mysqli_query($mysql, $sql);
                         $typeRow = mysqli_fetch_assoc($typeResult);
                         $typeName = $typeRow["type"];
 
                         //to get status
-                        $sql = "SELECT * FROM RequestStatus WHERE id='" . $row['statusID'] . "'";
+                        $sql = "SELECT * FROM requeststatus WHERE id='" . $row['statusID'] . "'";
                         $statusResult = mysqli_query($mysql, $sql);
                         $statusRow = mysqli_fetch_assoc($statusResult);
                         $status = $statusRow["status"];
@@ -157,7 +157,7 @@ include 'security.php';
                         echo $status;
                         if ($status == 'consultation provided') {
 
-                            $sql = "SELECT * FROM DesignConsultation WHERE requestID='" . $row['id'] . "'";
+                            $sql = "SELECT * FROM designconsultation WHERE requestID='" . $row['id'] . "'";
                             $imgResult = mysqli_query($mysql, $sql);
                             $imgRow = mysqli_fetch_assoc($imgResult);
                             $consultationImgFileName = $imgRow["consultationImgFileName"];

@@ -23,10 +23,10 @@ if (isset($_GET['request_id'])) {
         d.colorPreferences, 
         d.date
     FROM 
-        DesignConsultationRequest d
-        INNER JOIN Client c ON d.clientID = c.id
-        INNER JOIN RoomType r ON d.roomTypeID = r.id
-        INNER JOIN DesignCategory dc ON d.designCategoryID = dc.id
+        designconsultationrequest d
+        INNER JOIN client c ON d.clientID = c.id
+        INNER JOIN roomtype r ON d.roomTypeID = r.id
+        INNER JOIN designcategory dc ON d.designCategoryID = dc.id
     WHERE 
         d.id = $requestID";
 

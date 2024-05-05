@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
 
 
-        $sql = "SELECT emailAddress FROM Designer WHERE emailAddress = '$email'";
+        $sql = "SELECT emailAddress FROM designer WHERE emailAddress = '$email'";
         $result = mysqli_query($conn, $sql);
         // Check if any rows are returned
         if (mysqli_num_rows($result) > 0) {

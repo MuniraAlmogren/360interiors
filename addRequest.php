@@ -40,14 +40,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     } 
     
-    $sql= " SELECT id FROM RequestStatus WHERE status='pending consultation'";
+    $sql= " SELECT id FROM requeststatus WHERE status='pending consultation'";
     $result= mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
     $statusID = $row['id'];
    
     $sqlIDS = "SELECT rt.id AS roomTypeId, dc.id AS designCategoryId
-        FROM RoomType rt
-        INNER JOIN DesignCategory dc ON rt.type = '$roomType' AND dc.category = '$designCategory'";
+        FROM roomtype rt
+        INNER JOIN designcategory dc ON rt.type = '$roomType' AND dc.category = '$designCategory'";
     $resultIDS = mysqli_query($conn, $sqlIDS);
 
     if ($resultIDS && mysqli_num_rows($resultIDS) > 0) {

@@ -6,12 +6,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['category'])) {
     $category = $_POST['category'];
 
     if ($category == 'all') {
-        $query = "SELECT * FROM Designer";
+        $query = "SELECT * FROM designer";
     } else {
         // Query to select designers based on the selected category
         $query = "SELECT DISTINCT D.*, DS.designCategoryID 
-                    FROM Designer D 
-                    INNER JOIN DesignerSpeciality DS ON D.id = DS.designerID 
+                    FROM designer D 
+                    INNER JOIN designerspeciality DS ON D.id = DS.designerID 
                     WHERE DS.designCategoryID = '$category'";
     }
 
@@ -25,8 +25,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['category'])) {
     // Fetch specialties for each designer
     $designerId = $row['id'];
     $specialties_query = "SELECT DC.category 
-                          FROM DesignCategory DC 
-                          INNER JOIN DesignerSpeciality DS ON DC.id = DS.designCategoryID 
+                          FROM designcategory DC 
+                          INNER JOIN designerspeciality DS ON DC.id = DS.designCategoryID 
                           WHERE DS.designerID ='$designerId'";
     $specialties_result = mysqli_query($mysql, $specialties_query);
     $specialties = [];

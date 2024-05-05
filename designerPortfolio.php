@@ -60,7 +60,7 @@ include "security.php";
             $resultRetrieval = mysqli_query($c0nn, $queryRetrieveproject);
 
             // Retrieve designer information
-            $queryDinfo = "SELECT firstName, lastName, emailAddress, logoImgFileName FROM Designer WHERE id = $designerIdp";
+            $queryDinfo = "SELECT firstName, lastName, emailAddress, logoImgFileName FROM designer WHERE id = $designerIdp";
             $resultDinfo = mysqli_query($c0nn, $queryDinfo);
             $designerInfo = mysqli_fetch_assoc($resultDinfo);
         }

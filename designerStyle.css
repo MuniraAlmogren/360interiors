@@ -1,0 +1,126 @@
+
+
+
+#welcome{
+  font-family: serif;
+    margin-left: 5vw;
+    font-size: 2vw;
+    color: #282828;
+}
+
+#designerInfo,.table{
+  box-shadow: 0 4px 8px rgba(25, 18, 18, 0.15);
+    border-radius: 10px;
+    width: 50%;
+    margin: 2vw 5vw;
+    padding: 20px;
+    background-color: rgba(226, 221, 221, 0.8);
+    margin-bottom: 1rem;
+}
+
+.floatRight1{
+  box-shadow: 0 4px 8px rgba(25, 18, 18, 0.15);
+  border-radius: 10px;
+  width: 5%;
+  padding: 20px;
+  background-color: rgba(226, 221, 221, 0.8);
+  margin-bottom: 1rem;
+}
+
+.floatRight2{
+  box-shadow: 0 4px 8px rgba(25, 18, 18, 0.15);
+  border-radius: 10px;
+  width: 10%;
+  padding: 20px;
+  background-color: rgba(226, 221, 221, 0.8);
+  margin-bottom: 1rem;
+}
+
+
+.box{
+box-shadow: 0 4px 8px rgba(25, 18, 18, 0.15);
+    border-radius: 10px;
+    width: 50%;
+    margin: 2vw 5vw;
+    padding: 20px;
+    background-color: rgba(226, 221, 221, 0.8);
+    margin-bottom: 1rem;
+border: 2px solid #141414;
+}
+
+#small{
+box-shadow: 0 4px 8px rgba(25, 18, 18, 0.15);
+    border-radius: 10px;
+    width: 50%;
+    padding: 20px;
+    background-color:rgba(114, 107, 107, 0.8);
+    margin-bottom: 1rem;
+}
+
+
+table{
+  border: 1px solid black;
+  border-collapse: collapse;
+  border-top: none;
+  border-right: none;
+}
+
+th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.change2 {
+  font-size: 20px;
+margin-top: 15px;
+padding-left: 1vw;
+color: #282828;
+}
+
+.floatRight1,.floatRight2{
+  position: absolute;
+  left: 60vw;
+}
+
+
+.input, select {
+  width: 20vw;
+  padding: 10px;
+  margin-top: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background: rgba(104, 103, 103, 0.5);
+}
+
+.input:focus, select:focus {
+  outline: none;
+  background: #e8e8e8;
+  border-color: #007bff;
+}
+
+input[type=submit] {
+  font-size: 1rem;
+  color: #fff;
+  background-color: #81702a;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+input[type=submit]:hover, input[type=submit]:focus {
+  background-color: #b38900;
+  transform: scale(1.05);
+}
+
+input[type=submit]:active ,button:active{
+  transform: scale(0.95);
+}
+
+.button-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+

@@ -1,0 +1,108 @@
+/*clientStyle*/
+
+.table{
+    text-align: center;
+}
+form,.table ,.welcometInfo{/*Tarfah:add the table and the #clientInfo
+    shdan: made welcomeinfo class instead of Id */
+    box-shadow: 0 4px 8px rgba(25, 18, 18, 0.15);
+    border-radius: 10px;
+    width: 70%;
+    margin: 2vw 5vw;
+    padding: 20px;
+    background-color: rgba(226, 221, 221, 0.8);
+    margin-bottom: 1rem;/*add this property*/
+}
+
+table{/*Tarfah:add this new style rule*/
+    border: 1px solid black;
+    border-collapse: collapse;
+    border-top: none;
+    border-right: none;
+}
+/*the lat two property with the following rule will erase the boader from the empty nonexist cells*/
+th, td {/*Tarfah:add this new style rule*/
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+/*#fillterForm*/ 
+/*#DesignCatagory , #filter*/
+*#DesignCatagory{/*Tarfah:add this new style rule*/
+/*    position: relative;
+    right: -50px;*/
+    margin :1em;
+}
+
+.WelcomeMassage{/*Tarfah:add this new style rule to place the logout right to welcome massage*/
+/*    display: inline;*/
+    position: relative;
+    font-family: serif;
+    margin-left: 5vw;
+    font-size: 2vw;
+    color: #282828;
+
+}
+.logout{/*Tarfah:add this new style rule to place the logout*/
+    position: relative;
+    left: 70vw;
+    box-shadow: 0 4px 8px rgba(25, 18, 18, 0.15);
+    border-radius: 10px;
+    width: 5%;
+    padding: 10px;
+    background-color: rgba(226, 221, 221, 0.8);
+    margin-bottom: 5rem;
+} 
+
+#sendConsultation , #sendConsultation a{
+    align: center;
+    text-decoration:none
+}
+#sendConsultation a:visited{
+    color: #fff;
+    
+}
+
+.input, select {
+    width: 20vw;
+    padding: 10px;
+    margin-top: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: rgba(104, 103, 103, 0.5);
+}
+
+.input:focus, select:focus {
+    outline: none;
+    background: #e8e8e8;
+    border-color: #007bff;
+}
+
+input[type=submit] ,button{/*Tarfah: added button*/
+    font-size: 1rem;
+    color: #fff;
+    background-color: #81702a;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+input[type=submit]:hover, input[type=submit]:focus ,button:hover,button:focus{/*Tarfah: added button*/
+    background-color: #b38900;
+    transform: scale(1.05);
+}
+
+input[type=submit]:active ,button:active{/*Tarfah: added button*/
+    transform: scale(0.95);
+}
+
+textarea{
+    width: 50%;
+}
+textarea, input[type=text]{
+    box-shadow: 0 4px 8px rgba(25, 18, 18, 0.15);
+    border-radius: 10px;
+    background-color: rgba(226, 221, 221, 0.8);
+}
+
